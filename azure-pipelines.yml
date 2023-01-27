@@ -57,6 +57,7 @@ stages:
           inputs:
             provider: 'azurerm'
             command: 'plan'
+            environmentServiceNameAzureRM: 'azure-connection'
         - task: TerraformTaskV3@3
           displayName: Terraform Apply
           inputs:
