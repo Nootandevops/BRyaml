@@ -5,15 +5,13 @@
 
 trigger:
 - main
-
-pool:
-name: Default
-demands : vm
-
 stages:
   - stage: Build
     jobs:
       - job: Build Job
+        pool:
+         name: Default
+         demands: vm
         steps:
         - task: CopyFiles@2
           displayName: Copy Files 
